@@ -14,13 +14,7 @@ import re
 from sys import argv
 from typing import Optional
 
-from telegram.ext import (
-    CallbackContext,
-    CallbackQueryHandler,
-    CommandHandler,
-    Filters,
-    MessageHandler,
-)
+
 
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
