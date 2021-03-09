@@ -36,14 +36,14 @@ def help_user(bot, update):
         reply_to_message_id=update.message_id
     )
 
-SQND = "https://telegra.ph/file/00d720d86785b1e93ec2d.jpg"
+SQASND = "https://telegra.ph/file/00d720d86785b1e93ec2d.jpg"
 
 @Client.on_message(filters.command(["start"]))
 def send_start(bot, update):
     # logger.info(update)
     
-    bot.send_photo(
-        SQND,
+    bot.reply_photo(
+        SQASND,
         chat_id=update.chat.id,
         text=script.START_TEXT.format(update.from_user.first_name),
         parse_mode="html",
