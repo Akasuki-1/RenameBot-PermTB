@@ -56,7 +56,7 @@ def send_start(bot, update):
 def upgrade(bot, update):
     # logger.info(update)
 
-    bot.send_text(
+    bot.send_message(
         chat_id=update.chat.id,
         text=script.UPGRADE_TEXT,
         parse_mode="html",
