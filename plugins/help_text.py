@@ -9,6 +9,22 @@ import os
 import sqlite3
 import asyncio
 
+import importlib
+import re
+from sys import argv
+from typing import Optional
+
+from telegram.ext import (
+    CallbackContext,
+    CallbackQueryHandler,
+    CommandHandler,
+    Filters,
+    MessageHandler,
+)
+
+from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+from telegram.utils.helpers import escape_markdown
+
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
