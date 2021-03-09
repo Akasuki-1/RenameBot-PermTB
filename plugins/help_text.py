@@ -43,7 +43,7 @@ def send_start(bot, update):
     # logger.info(update)
     
     bot.send_photo(
-        SQND
+        SQND,
         chat_id=update.chat.id,
         text=script.START_TEXT.format(update.from_user.first_name),
         parse_mode="html",
